@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-image"
+        style="background-image: url('protruding-squares.png'); height: 100vh;">
+        >
+        <div class="container d-flex justify-content-center align-items-center
+      min-vh-100 mt-0">
+            <div class="d-flex flex-column rounded text-white bg-dark p-2" style="--bs-bg-opacity: .7;">
+                <h1 class="text-center">PIN / PASS GENERATOR</h1>
+                <hr>
+                <div class="d-flex flex-column gap-2 mt-2">
+                    <p class="text-start">Buat Pin & Password anda dengan kuat!!!</p>
+                    <label for="jumlahAngka" class="text-uppercase fw-bold">Masukan Panjang PIN/PASSWORD</label>
+                    <input type="number" id="jumlahAngka" class="form-control form-control-lg" onfocus="eraseOut()">
+                    <!-- checkBox -->
+                    <div>
+                    <div class="form-check form-check-inline">
+                        <input onclick="pushAlphabet()" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">lowwercase</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input onclick="pushAlphabetUp()" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Uppercase</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input onchange="pushSymbol()" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">symbol</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input onchange="pushNumber()" class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled">
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                          Number
+                        </label>
+                </div>
+                    <!-- checkBoxEnd -->
+                    <br>
+                    <label for="hasil" class="text-uppercase fw-bold">Hasil</label>
+                    <input id="hasil" class="form-control form-control-lg" disabled>
+                    <a class="btn btn-primary text-uppercase fw-bold btn-lg mt-2" onclick="copy()">copy</a>
+                    <a class="btn btn-primary text-uppercase fw-bold btn-lg mt-2" onclick="buatAngka()">Generate</a>
+                    <p id="ucapan" class="text-center"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
