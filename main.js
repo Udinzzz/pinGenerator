@@ -29,9 +29,13 @@ const buatAngka = () => {
 }
 // generate pass end
 // copy button
-function copy() {
-    navigator.clipboard.writeText(hasil.value)
-    alert('copied to clipboard')
+const copy = async() => {
+    try{
+        await navigator.clipboard.writeText(hasil.value)
+        alert('copied to clipboard')
+    } catch (error) {
+        alert("error",error)
+    }
 }
 // copy button end
 // delete pass
